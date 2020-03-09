@@ -1,6 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {fetchCrafts} from '../actions/fetchCrafts'
+import { connect } from 'react-redux'
+import { fetchCrafts } from '../actions/fetchCrafts'
 import Crafts from '../components/Crafts'
 import CraftInput from '../components/CraftInput'
 
@@ -9,20 +9,16 @@ class CraftsContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchCrafts()
-
   }
 
   render() {
     return (
-
       <div>
         <CraftInput />
-        <Crafts />
+        <Crafts crafts={this.props.crafts} />
       </div>
     )
-
   }
-
 }
 
 const mapStateToProps = state => {
@@ -31,4 +27,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {fetchCrafts})(CraftsContainer)
+export default connect(mapStateToProps, { fetchCrafts })(CraftsContainer)
