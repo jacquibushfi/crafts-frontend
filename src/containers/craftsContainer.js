@@ -11,19 +11,30 @@ class CraftsContainer extends React.Component {
     this.props.fetchCrafts()
   }
 
+  handleLoading = () => {
+    console.log(this.props.loading)
+    if(this.props.loading) {
+      return <h3>Loading...</h3>
+    } else {
+      return <Crafts crafts={this.props.crafts} />
+    }
+  }
+  
+
   render() {
     return (
       <div>
         <CraftInput />
-        <Crafts crafts={this.props.crafts} />
+        {this.handleLoading()}
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    crafts: state.crafts
+    crafts: state.crafts,
+    loading: state.loading
   }
 }
 

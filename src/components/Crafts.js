@@ -1,17 +1,19 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { render } from '@testing-library/react'
 
-/* functional component */
+class Crafts extends React.Component {
+  listCrafts = () => {
+    return this.props.crafts.map(craft => <li key={craft.id}>{craft.name}</li>)
+  }
+  
 
-const Crafts = (props) => {
-  return (
-  <div> 
-      {/* {props.crafts.map(craft =>
-        <li key={craft.id}>
-          <Link to={`/crafts/${craft.id}`}>{craft.name}</Link>
-        </li>)} */}
-    </div>
-  )
+  render() {
+    return (
+      <div> 
+        {this.listCrafts()}
+      </div>
+    ) 
+  }
 }
 
 export default Crafts

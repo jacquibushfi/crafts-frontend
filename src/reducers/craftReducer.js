@@ -4,7 +4,11 @@ export default (state = {
   action) => {
   switch(action.type){
     case 'FETCH_CRAFTS':
-      return {crafts: action.payload}
+      return {
+        ...state,
+        crafts: [...state.crafts],
+        loading: true
+      }
 
     default:
       return state 
