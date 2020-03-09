@@ -1,19 +1,22 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import Crafts from '../components/Crafts'
-import CraftInput from '../components/CraftsInput'
+import CraftInput from '../components/CraftInput'
+
 
 class CraftsContainer extends React.Component {
 
-render() {
-  return(
+  render() {
+    return (
 
-    <div>
-      CraftsContainer
-    </div>
-  )
+      <div>
+        <CraftInput />
+        <Crafts />
+      </div>
+    )
+
+  }
 
 }
 
-}
-
-export default CraftsContainer
+export default connect()(CraftsContainer)

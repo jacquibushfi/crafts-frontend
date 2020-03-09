@@ -1,6 +1,6 @@
 import React from 'react'
 
-/* functional component
+/* functional component */
 
 const Crafts = (props) => {
 
