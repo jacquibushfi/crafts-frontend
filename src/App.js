@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import CraftsContainer from './containers/craftsContainer'
+import CraftsContainer from './containers/CraftsContainer'
 
 
 class App extends React.Component {
