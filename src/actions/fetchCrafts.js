@@ -4,7 +4,7 @@ export function fetchCrafts() {
     fetch('http://localhost:3001/crafts')
       .then(response => response.json())
       .then(crafts => dispatch({
-        type: 'FETCH_ACCOUNTS',
+        type: 'FETCH_CRAFTS',
         payload: crafts
       }))
   }
