@@ -13,7 +13,7 @@ class CraftsContainer extends React.Component {
 
   handleLoading = () => {
     if (this.props.loading) {
-      return <div>Loading...</div>
+      return <h3>Loading...</h3>
     } else {
       return <Crafts crafts={this.props.crafts} />
     }
@@ -22,7 +22,9 @@ class CraftsContainer extends React.Component {
   render() {
     return (
       <div>
+        <h3>Create Craft</h3>
         <CraftInput />
+        <h3>Crafts</h3>
         {this.handleLoading()}
       </div>
     );
@@ -30,9 +32,10 @@ class CraftsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
+  console.log("I am state", state)
   return {
-    crafts: state.crafts,
-    loading: state.loading
+    crafts: state.craftReducer.crafts,
+    loading: state.craftReducer.loading
   }
 }
 

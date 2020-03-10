@@ -3,16 +3,16 @@ import React from 'react'
 
 class Crafts extends React.Component {
 
-  // listCrafts = () => {
-  //   return this.props.crafts.map(craft => <li key={craft.id}>{craft.name}</li>)
-  // }
 
   render() {
+
+    const listCrafts = this.props.crafts.map((craft, i) => <li key={i}>{craft.name}</li>)
+  
     return (
-      <div>
-       {/* {this.listCrafts()} */}
-      </div>
-    )
+    <div>
+      {listCrafts}
+    </div>
+    );
   }
 }
 
