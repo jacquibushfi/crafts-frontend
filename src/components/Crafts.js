@@ -1,4 +1,5 @@
 import React from 'react'
+import Craft from './Craft'
 
 
 class Crafts extends React.Component {
