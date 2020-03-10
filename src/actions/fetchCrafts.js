@@ -1,11 +1,16 @@
 export function fetchCrafts() {
 
   return (dispatch) => {
+    dispatch({ type: "FETCH_CRAFTS"})
     fetch('http://localhost:3001/crafts')
-      .then(response => {
+     .then(response => {
         return response.json()
       }).then(data => {
-        dispatch({ type: 'FETCH_CRAFTS', crafts: data.crafts })
+        dispatch({ type: 'LOAD_CRAFTS', crafts: data.crafts })
       })
+    }
   }
-}
+
+
+
+  

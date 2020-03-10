@@ -12,14 +12,12 @@ class CraftsContainer extends React.Component {
   }
 
   handleLoading = () => {
-    console.log(this.props.loading)
-    if(this.props.loading) {
-      return <h3>Loading...</h3>
+    if (this.props.loading) {
+      return <div>Loading...</div>
     } else {
       return <Crafts crafts={this.props.crafts} />
     }
   }
-  
 
   render() {
     return (
