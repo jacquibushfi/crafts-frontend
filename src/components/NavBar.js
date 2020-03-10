@@ -5,7 +5,8 @@ const lnkstyle = {
   width: '100px',
   padding: '12px',
   margin: '0 6px 6px',
-  paddingRight: '20px',
+  background: 'green',
+  color: 'white'
 }
 
 class NavBar extends React.Component {
@@ -15,19 +16,19 @@ class NavBar extends React.Component {
         <NavLink
           to="/"
           exact
-          style={{ lnkstyle }}
+          style={ lnkstyle }
         >Home</NavLink>
 
         <NavLink
           to="/crafts"
           exact
-          style={{ lnkstyle }}
+          style={ lnkstyle }
         >Crafts</NavLink>
 
         <NavLink
           to="/crafts/new"
           exact
-          style={{ lnkstyle }}
+          style={ lnkstyle }
         >New Craft</NavLink>
       </div>
     )

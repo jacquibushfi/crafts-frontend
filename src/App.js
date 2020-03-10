@@ -22,7 +22,7 @@ class App extends React.Component {
         <NavBar />
         <Switch>
           <Route path='/crafts/new' component={CraftInput}/>
-          <Route path = '/crafts' render={(routeProps) => (<CraftsContainer {...routeProps} crafts={this.state.crafts}/>)} />
+          <Route path = '/crafts' render={(routeProps) => (<CraftsContainer {...routeProps} crafts={this.props.crafts}/>)} />
           <Route path='/' component={Home}/>
         </Switch>
       </div>

@@ -28,6 +28,8 @@ class CraftInput extends React.Component {
   render() {
     return (
       <div>
+        <br></br>
+        <h2>New Craft</h2>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
