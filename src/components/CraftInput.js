@@ -1,13 +1,13 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {addCraft} from '../actions/addCraft'
+import { connect } from 'react-redux'
+import { addCraft } from '../actions/addCraft'
 
 
 
 class CraftInput extends React.Component {
 
   state = {
-    name: "",
+    name: '',
     loading: false
   }
 
@@ -19,28 +19,28 @@ class CraftInput extends React.Component {
 
   handleOnSubmit = event => {
     event.prevent.default()
-    const craft = {...this.state}
-    this.props.addCraft(craft)
+    this.props.addCraft(this.state)
     this.setState({
-      name: ""
+      name: ''
     })
   }
 
   render() {
-    return(
+    return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
           <input
             type="text"
-            value ={this.state.name}
+            value={this.state.name}
+            name="name"
             onChange={this.handleOnChange}
-            />
-            <button type="submit">Add Craft</button>
+          />
+          <button type="submit">Add Craft</button>
         </form>
       </div>
-)
-
+    )
   }
+
 }
 
-export default connect(null, {addCraft})(CraftInput)
+export default connect(null, { addCraft })(CraftInput)

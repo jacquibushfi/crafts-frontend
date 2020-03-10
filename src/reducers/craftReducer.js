@@ -1,5 +1,5 @@
-export default (state = { crafts: [], loading: false}, action) => {
-  switch(action.type){
+export default (state = { crafts: [], loading: false }, action) => {
+  switch (action.type) {
 
     case "FETCH_CRAFTS":
       return {
@@ -13,7 +13,22 @@ export default (state = { crafts: [], loading: false}, action) => {
         loading: false
       }
 
+    case "ADD_CRAFT":
+      console.log("got craft to add")
+      debugger
+      return {
+        ...state,
+        loading: true
+      }
+
+    case "CRAFT_ADDED":
+      console.log("added craft")
+      return {
+        crafts: [...state.crafts, action.payload],
+        loading: false
+      }
+
     default:
-      return state 
-    }
+      return state
   }
+}
