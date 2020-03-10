@@ -1,10 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
+
 class CraftsContainer extends React.Component {
 
   
 
   render() {
-    const craftsList = this.props.crafts.map((craft, i) => <li key={i}>{craft.name}</li>)
+    const craftsList = this.props.crafts.map((craft, i) =>
+     <li key={i}>
+       <Link to={`/crafts/${craft.id}`}>{craft.name}</Link>
+     </li>)
 
     return (
       <div>
