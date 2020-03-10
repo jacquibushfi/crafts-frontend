@@ -8,7 +8,8 @@ export default (state = { crafts: [], loading: false }, action) => {
       }
 
     case "LOAD_CRAFTS":
-      return {
+         return {
+        ...state,
         crafts: action.payload,
         loading: false
       }
@@ -21,7 +22,9 @@ export default (state = { crafts: [], loading: false }, action) => {
 
     case "CRAFT_ADDED":
       return {
+        ...state,
         crafts: [...state.crafts, action.payload],
+
         loading: false
       }
 

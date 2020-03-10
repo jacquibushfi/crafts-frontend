@@ -6,6 +6,7 @@ import CraftsContainer from './containers/CraftsContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import CraftInput from './components/CraftInput'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 
 
@@ -16,24 +17,21 @@ class App extends React.Component {
   }
 
   render() {
-    
+
     return (
       <div>
+        <Router>
         <NavBar />
         <Switch>
-          <Route path='/crafts/new' component={CraftInput}/>
-          <Route path = '/crafts' render={(routeProps) => (<CraftsContainer {...routeProps} crafts={this.props.crafts}/>)} />
-          <Route path='/' component={Home}/>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/crafts' component={CraftsContainer} />
+          <Route exact path='/crafts/new' component={CraftInput} />
+          {/* put in routes for crafts/id etc.  does not have to be in navbar */}
         </Switch>
+        </Router>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    crafts: state.craftReducer.crafts,
-    loading: state.craftReducer.loading
-  }
-}
-export default connect(mapStateToProps, {fetchCrafts})(App);
+export default connect(null, {fetchCrafts})(App);
