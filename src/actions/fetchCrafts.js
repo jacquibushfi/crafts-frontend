@@ -6,5 +6,5 @@ export const fetchCrafts = () => {
       .then(response => response.json())
       .then(data => 
         dispatch({ type: 'LOAD_CRAFTS', payload: data }))
-    }
+  }
 }

@@ -17,8 +17,8 @@ class CraftInput extends React.Component {
     })
   }
 
-  handleOnSubmit = event => {
-    event.prevent.default()
+  handleSubmit = event => {
+    event.preventDefault()
     this.props.addCraft(this.state)
     this.setState({
       name: ''
@@ -28,7 +28,7 @@ class CraftInput extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleOnSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             value={this.state.name}

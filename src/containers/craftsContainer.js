@@ -32,7 +32,6 @@ class CraftsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("I am state", state)
   return {
     crafts: state.craftReducer.crafts,
     loading: state.craftReducer.loading
