@@ -8,7 +8,7 @@ class CraftsContainer extends React.Component {
    render() {
     const craftsList = this.props.crafts.map((craft, i) =>
       <li key={i}>
-        <Link to={`/crafts/${craft.id}`}>{craft.name}</Link>
+        <Link to={`/crafts/${craft.id}/supplies`}>{craft.name}</Link>
       </li>)
     return (
       <div>
