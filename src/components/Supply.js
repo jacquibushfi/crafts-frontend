@@ -1,6 +1,6 @@
 import React from 'react'
 
-class SuppliesContainer extends React.Component {
+export class Supply extends React.Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class SuppliesContainer extends React.Component {
   }
 }
 
-export default SuppliesContainer
+export default Supply
