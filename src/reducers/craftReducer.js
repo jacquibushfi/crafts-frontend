@@ -24,7 +24,6 @@ export default (state = { crafts: [], loading: false }, action) => {
       return {
         ...state,
         crafts: [...state.crafts, action.payload],
-
         loading: false
       }
 

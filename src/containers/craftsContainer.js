@@ -4,15 +4,8 @@ import { fetchCrafts } from '../actions/fetchCrafts'
 import { connect } from 'react-redux'
 
 class CraftsContainer extends React.Component {
-  
 
-
-  // componentDidMount() {
-  //   this.props.fetchCrafts()
-  // }
-
-
-  render() {
+   render() {
     const craftsList = this.props.crafts.map((craft, i) =>
       <li key={i}>
         <Link to={`/crafts/${craft.id}`}>{craft.name}</Link>
@@ -21,6 +14,7 @@ class CraftsContainer extends React.Component {
       <div>
         <br></br>
         <h3>CRAFTS</h3>
+        <h5>Select a craft to see the supplies</h5>
         <ul>
           {this.props.loading ? <h3>Loading...</h3> : craftsList}
         </ul>
