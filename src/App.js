@@ -3,6 +3,7 @@ import './App.css';
 import { connect } from 'react-redux'
 import { fetchCrafts } from './actions/fetchCrafts'
 import CraftsContainer from './containers/CraftsContainer'
+import SuppliesContainer from './containers/SuppliesContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import CraftInput from './components/CraftInput'
@@ -27,9 +28,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/crafts' component={CraftsContainer} />
           <Route exact path='/crafts/new' component={CraftInput} />
-          <Route exact path='/crafts/:id/supplies' component={Craft} />
-
-          {/* put in routes for crafts/id etc.  does not have to be in navbar */}
+          <Route exact path='/crafts/:id/supplies' component={SuppliesContainer} />
         </Switch>
         </Router>
       </div>

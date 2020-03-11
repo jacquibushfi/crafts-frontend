@@ -4,11 +4,17 @@ import { fetchCrafts } from '../actions/fetchCrafts'
 import { connect } from 'react-redux'
 
 class CraftsContainer extends React.Component {
-
-   render() {
+  
+  render() {
+  
     const craftsList = this.props.crafts.map((craft, i) =>
       <li key={i}>
-        <Link to={`/crafts/${craft.id}/supplies`}>{craft.name}</Link>
+        <Link to={{
+          pathname: `/crafts/${craft.id}/supplies`,
+          state: {
+            craft: { craft }
+          }
+        }}>{craft.name}</Link>
       </li>)
     return (
       <div>
@@ -30,4 +36,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {fetchCrafts})(CraftsContainer)
+export default connect(mapStateToProps, { fetchCrafts })(CraftsContainer)
