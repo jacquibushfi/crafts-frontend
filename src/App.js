@@ -7,7 +7,6 @@ import SuppliesContainer from './containers/SuppliesContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import CraftInput from './components/CraftInput'
-import Craft from './components/Craft'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 
@@ -27,8 +26,9 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/crafts' component={CraftsContainer} />
-          <Route exact path='/crafts/new' component={CraftInput} />
           <Route exact path='/crafts/:id/supplies' component={SuppliesContainer} />
+          <Route exact path='/crafts/new' component={CraftInput} />
+          
         </Switch>
         </Router>
       </div>

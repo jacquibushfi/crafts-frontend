@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addSupply } from '../actions/fetchSupplies'
+import SuppliesContainer from '../containers/SuppliesContainer'
 
 class SupplyInput extends React.Component {
 
@@ -20,14 +21,11 @@ class SupplyInput extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-
     this.props.addSupply(this.state, this.props.id)
     this.setState({
       description: '',
       vendor: '',
       price: ''
-
-      // ask about this
     })
   }
   render() {
@@ -57,15 +55,10 @@ class SupplyInput extends React.Component {
             name="price"
             onChange={this.handleOnChange}
           /><br></br>
-          <input
-            type="hidden"
-            value={this.props.id}
-            name="craft_id"
-            onChange={this.handleOnChange}
-          />
 
-          <button type="submit">Add Craft</button>
+          <button type="submit">Add Supply</button>
         </form>
+       <SuppliesContainer id={this.props.id} />
       </div>
     )
   }

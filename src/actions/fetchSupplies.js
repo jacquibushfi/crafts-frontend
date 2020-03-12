@@ -1,5 +1,5 @@
 export const addSupply = (supply, id) => {
-
+ 
   return (dispatch) => {
     dispatch({ type: "ADD_SUPPLY" }, supply)
     return fetch (`/crafts/${id}/supplies`, {
