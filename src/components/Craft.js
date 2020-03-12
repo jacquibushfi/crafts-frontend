@@ -1,13 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
 
-export class Craft extends React.Component {
-  render() {
-    return (
-      <div>
 
-      </div>
-    )
-  }
+function Craft(props) {
+
+  return (
+    <div>
+     {props.crafts.map((craft, i) =>
+       <li key={i}>
+         <Link to={{
+           pathname: `/crafts/${craft.id}/supplies`
+         }}>{craft.name}</Link>
+       </li>)}
+    </div>
+  )
 }
 
-export default Craft
+export default connect(null)(Craft)

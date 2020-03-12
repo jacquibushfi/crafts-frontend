@@ -7,10 +7,10 @@ class SuppliesContainer extends React.Component {
 
   render() {
     //add some iff statements to check if empty
-    const craft = this.props.crafts.filter(c => c.id == this.props.match.params.id)[0]
+    // const craft = this.props.crafts.filter(c => c.id == this.props.match.params.id)[0]
 
-    let supplylist = []
-    supplylist = craft.supplies.map((supply, i) => <li key={i}>{supply.description}</li>)
+    // // let supplylist = []
+    // let supplylist = craft.supplies.map((supply, i) => <li key={i}>{supply.description}</li>)
  
     return (
       <div>
@@ -19,7 +19,8 @@ class SuppliesContainer extends React.Component {
         <h3>{craft.name}</h3>
         <hr></hr>
         <ul>
-          {supplylist}
+          {/* {supplylist} */}
+          <Supply {...props} />
         </ul>
       </div>
     );

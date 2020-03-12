@@ -1,13 +1,15 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-export class Supply extends React.Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+function Supply(props) {
+
+  const craft = this.props.crafts.filter(c => c.id == this.props.match.params.id)[0]
+
+  return (
+    <div>
+      {craft.supplies.map((supply, i) => <li key={i}>{supply.description}</li>)}
+    </div>
+  )
 }
 
-export default Supply
+export default connect(null)Supply

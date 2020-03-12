@@ -1,6 +1,5 @@
-// export default (state = {supplies: [], loading: false}, action) => {
-  export default (state = {supplies: [], loading: false}, action) => {
-  switch(action.type){
+export default (state = { crafts: [], loading: false }, action) => {
+  switch (action.type) {
 
     // case "ADD_SUPPLY":
     //   return {
