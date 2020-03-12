@@ -11,9 +11,6 @@ class CraftsContainer extends React.Component {
       <li key={i}>
         <Link to={{
           pathname: `/crafts/${craft.id}/supplies`
-          // state: {
-          //   craft: { craft }
-          // }
         }}>{craft.name}</Link>
       </li>)
     return (
