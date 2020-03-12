@@ -1,8 +1,8 @@
 export const addSupply = (supply, id) => {
- 
+
   return (dispatch) => {
     dispatch({ type: "ADD_SUPPLY" }, supply)
-    return fetch (`/crafts/${id}/supplies`, {
+    return fetch(`/crafts/${id}/supplies`, {
       method: "POST",
       body: JSON.stringify(supply),
       headers: {
@@ -10,7 +10,7 @@ export const addSupply = (supply, id) => {
       }
     })
       .then(response => response.json())
-      .then(craft => {
+      .then(supply => {
         return dispatch({ type: "SUPPLY_ADDED", payload: supply })
       })
 

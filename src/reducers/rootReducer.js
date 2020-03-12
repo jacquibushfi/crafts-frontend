@@ -3,8 +3,8 @@ import craftReducer from './craftReducer'
 import supplyReducer from './supplyReducer'
 
 const rootReducer = combineReducers({
-  craftReducer,
-  supplyReducer
+  craftReducer
+  // supplyReducer
 })
 
 export default rootReducer

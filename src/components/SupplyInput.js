@@ -58,7 +58,7 @@ class SupplyInput extends React.Component {
 
           <button type="submit">Add Supply</button>
         </form>
-       <SuppliesContainer id={this.props.id} />
+       {/* <SuppliesContainer id={this.props.id} /> */}
       </div>
     )
   }

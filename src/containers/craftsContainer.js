@@ -10,10 +10,10 @@ class CraftsContainer extends React.Component {
     const craftsList = this.props.crafts.map((craft, i) =>
       <li key={i}>
         <Link to={{
-          pathname: `/crafts/${craft.id}/supplies`,
-          state: {
-            craft: { craft }
-          }
+          pathname: `/crafts/${craft.id}/supplies`
+          // state: {
+          //   craft: { craft }
+          // }
         }}>{craft.name}</Link>
       </li>)
     return (
