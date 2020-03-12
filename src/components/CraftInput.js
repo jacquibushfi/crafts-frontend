@@ -2,8 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addCraft } from '../actions/fetchCrafts'
 import CraftsContainer from '../containers/CraftsContainer'
-// bring in browser router
-
 
 class CraftInput extends React.Component {
 
@@ -24,7 +22,6 @@ class CraftInput extends React.Component {
     this.setState({
       name: ''
     })
-    //  route to crafts container or do history to go back
   }
 
   render() {
