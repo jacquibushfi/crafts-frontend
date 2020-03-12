@@ -7,6 +7,7 @@ function Supply(props) {
 
   return (
     <div>
+      <h3>{craft.name}</h3>
       {craft.supplies.map((supply, i) => <li key={i}>{supply.description}</li>)}
     </div>
   )
