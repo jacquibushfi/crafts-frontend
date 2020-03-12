@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import SupplyInput from '../components/SupplyInput'
+import Supply from '../components/Supply'
 
 
 class SuppliesContainer extends React.Component {
@@ -16,11 +17,11 @@ class SuppliesContainer extends React.Component {
       <div>
         <SupplyInput id={this.props.match.params.id} />
         <br></br>
-        <h3>{craft.name}</h3>
+        {/* <h3>{this.props.craft.name}</h3> */}
         <hr></hr>
         <ul>
           {/* {supplylist} */}
-          <Supply {...props} />
+          <Supply crafts={this.props} />
         </ul>
       </div>
     );
@@ -28,7 +29,6 @@ class SuppliesContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("the map", state.craftReducer.crafts)
   return {
     crafts: state.craftReducer.crafts,
   }

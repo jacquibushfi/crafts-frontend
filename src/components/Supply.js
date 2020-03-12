@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 
 function Supply(props) {
 
-  const craft = this.props.crafts.filter(c => c.id == this.props.match.params.id)[0]
+  let craft = props.crafts.crafts.filter(c => c.id == props.crafts.match.params.id)[0]
 
   return (
     <div>
@@ -12,4 +12,4 @@ function Supply(props) {
   )
 }
 
-export default connect(null)Supply
+export default connect(null)(Supply)
