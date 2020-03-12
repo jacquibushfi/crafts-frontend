@@ -4,15 +4,12 @@ import SupplyInput from '../components/SupplyInput'
 
 
 class SuppliesContainer extends React.Component {
- 
-
 
   render() {
-//add some iff statements to check if empty
+    //add some iff statements to check if empty
     const craft = this.props.crafts.filter(c => c.id == this.props.match.params.id)[0]
 
     let supplylist = []
-    //supplylist = this.props.location.state.craft.craft.supplies.map((supply, i) => <li key={i}>{supply.description}</li>)
     supplylist = craft.supplies.map((supply, i) => <li key={i}>{supply.description}</li>)
  
     return (

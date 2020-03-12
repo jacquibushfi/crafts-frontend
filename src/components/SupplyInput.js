@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addSupply } from '../actions/fetchSupplies'
-import SuppliesContainer from '../containers/SuppliesContainer'
 
 class SupplyInput extends React.Component {
 
@@ -58,7 +57,6 @@ class SupplyInput extends React.Component {
 
           <button type="submit">Add Supply</button>
         </form>
-       {/* <SuppliesContainer id={this.props.id} /> */}
       </div>
     )
   }

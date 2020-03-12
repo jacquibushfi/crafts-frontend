@@ -1,4 +1,3 @@
-// export default (state = { crafts: [], loading: false }, action) => {
   export default (state = { crafts: [], loading: false }, action) => {
   switch (action.type) {
 
@@ -35,7 +34,6 @@
       }
 
       case "SUPPLY_ADDED":
-        // filter the craft for the payload id to find the craft
         let craft = state.crafts.filter(c => c.id === action.payload.craft_id)[0]
         let newcraft = {
           ...craft, 
