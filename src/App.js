@@ -10,7 +10,6 @@ import CraftInput from './components/CraftInput'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 
-
 class App extends React.Component {
 
   componentDidMount() {
@@ -28,7 +27,6 @@ class App extends React.Component {
           <Route exact path='/crafts' component={CraftsContainer} />
           <Route exact path='/crafts/:id/supplies' component={SuppliesContainer} />
           <Route exact path='/crafts/new' component={CraftInput} />
-          
         </Switch>
         </Router>
       </div>
