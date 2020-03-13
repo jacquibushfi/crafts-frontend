@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux'
 import { fetchCrafts } from './actions/fetchCrafts'
-import CraftsContainer from './containers/CraftsContainer'
-import SuppliesContainer from './containers/SuppliesContainer'
+import CraftsContainer from './containers/craftsContainer'
+import SuppliesContainer from './containers/suppliesContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import CraftInput from './components/CraftInput'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addCraft } from '../actions/fetchCrafts'
-import CraftsContainer from '../containers/CraftsContainer'
+import CraftsContainer from '../containers/craftsContainer'
 
 class CraftInput extends React.Component {
 
