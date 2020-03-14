@@ -1,3 +1,6 @@
+This project has a backend api created in Rails.  The name of that repo is "crafts-backend" and is located here https://github.com/jacquibushfi/crafts-backend .  The proxy has been set to "http://localhost:3000"
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
