@@ -17,7 +17,7 @@ export const addSupply = (supply, id) => {
         return dispatch({ type: "SUPPLY_ADDED", payload: supply })
       })
       .catch((error) => {
-        alert(`${error} Error creating new supply. Description is Required`)
+        alert(`${error} Error creating a new supply. Description is Required`)
       })
   }
 }

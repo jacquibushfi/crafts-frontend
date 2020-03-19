@@ -28,7 +28,7 @@ export const addCraft = (craft) => {
         return dispatch({ type: "CRAFT_ADDED", payload: craft })
       })
       .catch((error) => {
-        alert(`${error} Error creating new Craft. Name is Required`)
+        alert(`${error} Error creating a new Craft. Name is Required`)
       })
   }
 }
