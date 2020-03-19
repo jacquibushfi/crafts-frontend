@@ -35,7 +35,8 @@ class CraftInput extends React.Component {
             value={this.state.name}
             name="name"
             required
-            pattern="\S+"
+            pattern="^[^-\s][a-zA-Z0-9_\s-]+$"
+            title="Cannot be blank"
             onChange={this.handleOnChange}
           />
           <button type="submit">Add Craft</button>
