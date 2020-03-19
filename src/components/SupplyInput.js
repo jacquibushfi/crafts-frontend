@@ -40,6 +40,7 @@ class SupplyInput extends React.Component {
             name="description"
             required
             pattern="^[^-\s][a-zA-Z0-9_\s-]+$"
+            title="Description cannot be blank"
             onChange={this.handleOnChange}
           /><br></br>
           <label>Vendor:</label>
