@@ -35,6 +35,7 @@ class CraftInput extends React.Component {
             value={this.state.name}
             name="name"
             required
+            pattern="\S+"
             onChange={this.handleOnChange}
           />
           <button type="submit">Add Craft</button>

@@ -39,6 +39,7 @@ class SupplyInput extends React.Component {
             value={this.state.description}
             name="description"
             required
+            pattern="\S+"
             onChange={this.handleOnChange}
           /><br></br>
           <label>Vendor:</label>
