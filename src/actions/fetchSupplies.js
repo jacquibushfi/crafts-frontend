@@ -9,10 +9,15 @@ export const addSupply = (supply, id) => {
         'Content-Type': 'application/json'
       }
     })
-      .then(response => response.json())
+    .then(response => {
+      if(!response.ok) throw new Error(response.status)
+        else return response.json()
+      })
       .then(supply => {
         return dispatch({ type: "SUPPLY_ADDED", payload: supply })
       })
-
+      .catch((error) => {
+        alert(`${error} Error creating new supply. Description is Required`)
+      })
   }
 }

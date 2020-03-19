@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Supply(props) {
+function Supply(crafts) {
 
-  let craft = props.crafts.crafts.filter(c => c.id == props.crafts.match.params.id)[0]
+  let craft = crafts.crafts.crafts.filter(c => c.id == crafts.crafts.match.params.id)[0]
 
   const supplylist = craft.supplies.map((supply, i) => <li key={i}>{supply.description}</li>)
 

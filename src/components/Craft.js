@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Craft(props) {
+function Craft(crafts) {
 
-  const craftlist = props.crafts.map((craft, i) =>
+  const craftlist = crafts.crafts.map((craft, i) =>
     <li key={i}>
       <Link to={{
         pathname: `/crafts/${craft.id}/supplies`

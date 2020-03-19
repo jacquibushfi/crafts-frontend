@@ -20,10 +20,15 @@ export const addCraft = (craft) => {
         'Content-Type': 'application/json'
       }
     })
-      .then(response => response.json())
+      .then(response => {
+        if(!response.ok) throw new Error(response.status)
+        else return response.json()
+      })
       .then(craft => {
         return dispatch({ type: "CRAFT_ADDED", payload: craft })
       })
-
+      .catch((error) => {
+        alert(`${error} Error creating new Craft. Name is Required`)
+      })
   }
 }

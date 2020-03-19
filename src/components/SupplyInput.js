@@ -38,6 +38,7 @@ class SupplyInput extends React.Component {
             type="text"
             value={this.state.description}
             name="description"
+            required
             onChange={this.handleOnChange}
           /><br></br>
           <label>Vendor:</label>
