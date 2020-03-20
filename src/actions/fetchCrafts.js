@@ -21,14 +21,16 @@ export const addCraft = (craft) => {
       }
     })
       .then(response => {
-        if(!response.ok) throw new Error(response.status)
+        if(!response.ok) {throw response}
         else return response.json()
       })
       .then(craft => {
         return dispatch({ type: "CRAFT_ADDED", payload: craft })
       })
       .catch((error) => {
-        alert(`${error} Error creating a new Craft. Name is Required`)
+        error.text().then(errorMessage => {
+          alert(errorMessage)
+        })
       })
   }
 }
